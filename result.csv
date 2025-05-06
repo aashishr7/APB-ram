@@ -1,0 +1,205 @@
+[2025-05-06 15:18:22 UTC] vlib work && vlog '-timescale' '1ns/1ns' +incdir+$RIVIERA_HOME/vlib/uvm-1.2/src -l uvm_1_2 -err VCP2947 W9 -err VCP2974 W9 -err VCP3003 W9 -err VCP5417 W9 -err VCP6120 W9 -err VCP7862 W9 -err VCP2129 W9 design.sv testbench.sv  && vsim -c -do "vsim +access+r; run -all; exit"  
+VSIMSA: Configuration file changed: `/home/runner/library.cfg'
+ALIB: Library "work" attached.
+work = /home/runner/work/work.lib
+MESSAGE_SP VCP2124 "Package uvm_pkg found in library uvm_1_2."
+MESSAGE "Unit top modules: ahb_ram_tb."
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 5[s]."
+done
+# Aldec, Inc. Riviera-PRO version 2023.04.112.8911 built for Linux64 on May 12, 2023.
+# HDL, SystemC, and Assertions simulator, debugger, and design environment.
+# (c) 1999-2023 Aldec, Inc. All rights reserved.
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Package 'uvm_pkg' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.6 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# KERNEL: PLI/VHPI kernel's engine initialization done.
+# PLI: Loading library '/usr/share/Riviera-PRO/bin/libsystf.so'
+# ELAB2: Create instances ...
+# KERNEL: Info: Loading library:  /usr/share/Riviera-PRO/bin/uvm_1_2_dpi
+# KERNEL: Time resolution set to 1ns.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.1 [s]
+# SLP: Finished : 0.1 [s]
+# SLP: 0 primitives and 6 (37.50%) other processes in SLP
+# SLP: 23 (0.08%) signals in SLP and 105 (0.35%) interface signals
+# ELAB2: Elaboration final pass complete - time: 2.2 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Riviera-PRO EDU Edition. The performance of simulation is reduced.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 29823 kB (elbread=2086 elab2=22820 kernel=4916 sdf=0)
+# KERNEL: UVM_INFO /home/build/vlib1/vlib/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+# KERNEL: ----------------------------------------------------------------
+# KERNEL: UVM-1.2
+# KERNEL: (C) 2007-2014 Mentor Graphics Corporation
+# KERNEL: (C) 2007-2014 Cadence Design Systems, Inc.
+# KERNEL: (C) 2006-2014 Synopsys, Inc.
+# KERNEL: (C) 2011-2013 Cypress Semiconductor Corp.
+# KERNEL: (C) 2013-2014 NVIDIA Corporation
+# KERNEL: ----------------------------------------------------------------
+# KERNEL: 
+# KERNEL:   ***********       IMPORTANT RELEASE NOTES         ************
+# KERNEL: 
+# KERNEL:   You are using a version of the UVM library that has been compiled
+# KERNEL:   with `UVM_NO_DEPRECATED undefined.
+# KERNEL:   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# KERNEL: 
+# KERNEL:   You are using a version of the UVM library that has been compiled
+# KERNEL:   with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+# KERNEL:   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# KERNEL: 
+# KERNEL:       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# KERNEL: 
+# KERNEL: ASDB file was created in location /home/runner/dataset.asdb
+# KERNEL: UVM_INFO @ 0: reporter [RNTST] Running test test_1...
+# KERNEL: Created object of type:: TEST ram_env
+# KERNEL: Created object of type:: ENV ram_agent
+# KERNEL: Created object of type:: ENV ram_scb
+# KERNEL: Inside build phase= ram_agent
+# KERNEL: Created object of type AGT :: ram_monitor
+# KERNEL: Created object of type AGT :: ram_sequencer
+# KERNEL: Created object of type AGT:: ram_driver
+# KERNEL: Inside build phase= ram_driver
+# KERNEL: Inside build phase= ram_monitor
+# KERNEL: Inside build phase SEQR= ram_sequencer
+# KERNEL: UVM_INFO /home/runner/uvm_env.sv(41) @ 0: uvm_test_top.ram_env [ram_env] Information printed from top_env::end_of_elaboration_phase method
+# KERNEL: UVM_INFO /home/runner/uvm_env.sv(42) @ 0: uvm_test_top.ram_env [ram_env] Verbosity threshold is         200
+# KERNEL: UVM_INFO /home/build/vlib1/vlib/uvm-1.2/src/base/uvm_root.svh(583) @ 0: reporter [UVMTOP] UVM testbench topology:
+# KERNEL: --------------------------------------------------------------
+# KERNEL: Name                       Type                    Size  Value
+# KERNEL: --------------------------------------------------------------
+# KERNEL: uvm_test_top               test_1                  -     @340 
+# KERNEL:   ram_env                  ram_env                 -     @353 
+# KERNEL:     ragt                   ram_agent               -     @362 
+# KERNEL:       drv                  ram_driver              -     @540 
+# KERNEL:         rsp_port           uvm_analysis_port       -     @559 
+# KERNEL:         seq_item_port      uvm_seq_item_pull_port  -     @549 
+# KERNEL:       mon                  ram_monitor             -     @381 
+# KERNEL:         mon_port           uvm_analysis_port       -     @390 
+# KERNEL:       seqr                 ram_sequencer           -     @403 
+# KERNEL:         rsp_export         uvm_analysis_export     -     @412 
+# KERNEL:         seq_item_export    uvm_seq_item_pull_imp   -     @530 
+# KERNEL:         arbitration_queue  array                   0     -    
+# KERNEL:         lock_queue         array                   0     -    
+# KERNEL:         num_last_reqs      integral                32    'd1  
+# KERNEL:         num_last_rsps      integral                32    'd1  
+# KERNEL:     rscb                   ram_scb                 -     @371 
+# KERNEL:       scb_imp              uvm_analysis_imp        -     @576 
+# KERNEL: --------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/build/vlib1/vlib/uvm-1.2/src/base/uvm_factory.svh(1645) @ 0: reporter [UVM/FACTORY/PRINT] 
+# KERNEL: #### Factory Configuration (*)
+# KERNEL: 
+# KERNEL:   No instance or type overrides are registered with this factory
+# KERNEL: 
+# KERNEL: All types registered with the factory: 63 total
+# KERNEL:   Type Name
+# KERNEL:   ---------
+# KERNEL:   ram_agent
+# KERNEL:   ram_driver
+# KERNEL:   ram_env
+# KERNEL:   ram_monitor
+# KERNEL:   ram_scb
+# KERNEL:   ram_sequence
+# KERNEL:   ram_sequencer
+# KERNEL:   seq_item
+# KERNEL:   test_1
+# KERNEL: (*) Types with no associated type name will be printed as <unknown>
+# KERNEL: 
+# KERNEL: ####
+# KERNEL: 
+# KERNEL: 
+# KERNEL: Created object of type: ram_sequence
+# KERNEL: Created object of type :: SEQ seq_item
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: Created object of type :: SEQ seq_item
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: UVM_INFO /home/runner/uvm_scb.sv(140) @ 55: uvm_test_top.ram_env.rscb [ram_scb] T=55 WRITE: Addr=0x16 Data=0xf0
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: UVM_INFO /home/runner/uvm_scb.sv(156) @ 75: uvm_test_top.ram_env.rscb [ram_scb] T=75 <<< READ MATCH >>> Addr=0x16: Expected=0xf0, Got=0xf0
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: Created object of type :: SEQ seq_item
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: UVM_INFO /home/runner/uvm_scb.sv(140) @ 115: uvm_test_top.ram_env.rscb [ram_scb] T=115 WRITE: Addr=0x16 Data=0xe5
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: UVM_INFO /home/runner/uvm_scb.sv(156) @ 135: uvm_test_top.ram_env.rscb [ram_scb] T=135 <<< READ MATCH >>> Addr=0x16: Expected=0xe5, Got=0xe5
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: Created object of type :: SEQ seq_item
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: UVM_INFO /home/runner/uvm_scb.sv(140) @ 175: uvm_test_top.ram_env.rscb [ram_scb] T=175 WRITE: Addr=0x2c Data=0xd0
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: UVM_INFO /home/runner/uvm_scb.sv(156) @ 195: uvm_test_top.ram_env.rscb [ram_scb] T=195 <<< READ MATCH >>> Addr=0x2c: Expected=0xd0, Got=0xd0
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: Created object of type :: SEQ seq_item
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: UVM_INFO /home/runner/uvm_scb.sv(140) @ 235: uvm_test_top.ram_env.rscb [ram_scb] T=235 WRITE: Addr=0x37 Data=0x39
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: UVM_INFO /home/runner/uvm_scb.sv(156) @ 255: uvm_test_top.ram_env.rscb [ram_scb] T=255 <<< READ MATCH >>> Addr=0x37: Expected=0x39, Got=0x39
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: UVM_INFO /home/runner/uvm_scb.sv(140) @ 295: uvm_test_top.ram_env.rscb [ram_scb] T=295 WRITE: Addr=0x2c Data=0x56
+# KERNEL: Created object of type :: SEQ seq_item
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: UVM_INFO /home/runner/uvm_scb.sv(156) @ 315: uvm_test_top.ram_env.rscb [ram_scb] T=315 <<< READ MATCH >>> Addr=0x2c: Expected=0x56, Got=0x56
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: Created object of type :: SEQ seq_item
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: UVM_INFO /home/runner/uvm_scb.sv(140) @ 355: uvm_test_top.ram_env.rscb [ram_scb] T=355 WRITE: Addr=0xb Data=0x3d
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: UVM_INFO /home/runner/uvm_scb.sv(156) @ 375: uvm_test_top.ram_env.rscb [ram_scb] T=375 <<< READ MATCH >>> Addr=0xb: Expected=0x3d, Got=0x3d
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: Created object of type :: SEQ seq_item
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: UVM_INFO /home/runner/uvm_scb.sv(140) @ 415: uvm_test_top.ram_env.rscb [ram_scb] T=415 WRITE: Addr=0x42 Data=0xe4
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: UVM_INFO /home/runner/uvm_scb.sv(156) @ 435: uvm_test_top.ram_env.rscb [ram_scb] T=435 <<< READ MATCH >>> Addr=0x42: Expected=0xe4, Got=0xe4
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: Created object of type :: SEQ seq_item
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: UVM_INFO /home/runner/uvm_scb.sv(140) @ 475: uvm_test_top.ram_env.rscb [ram_scb] T=475 WRITE: Addr=0x4d Data=0x98
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: UVM_INFO /home/runner/uvm_scb.sv(156) @ 495: uvm_test_top.ram_env.rscb [ram_scb] T=495 <<< READ MATCH >>> Addr=0x4d: Expected=0x98, Got=0x98
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: Created object of type :: SEQ seq_item
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: UVM_INFO /home/runner/uvm_scb.sv(140) @ 535: uvm_test_top.ram_env.rscb [ram_scb] T=535 WRITE: Addr=0x21 Data=0xb1
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: UVM_INFO /home/runner/uvm_scb.sv(156) @ 555: uvm_test_top.ram_env.rscb [ram_scb] T=555 <<< READ MATCH >>> Addr=0x21: Expected=0xb1, Got=0xb1
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: Created object of type MON:: seq_item
+# KERNEL: UVM_INFO /home/runner/uvm_scb.sv(140) @ 595: uvm_test_top.ram_env.rscb [ram_scb] T=595 WRITE: Addr=0xb Data=0xb1
+# KERNEL: UVM_INFO /home/runner/test_1.sv(48) @ 595: uvm_test_top [test_1] End of testcase
+# KERNEL: UVM_INFO /home/build/vlib1/vlib/uvm-1.2/src/base/uvm_objection.svh(1271) @ 595: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# KERNEL: UVM_INFO /home/runner/uvm_scb.sv(169) @ 595: uvm_test_top.ram_env.rscb [ram_scb] RAM SCB: Total Read Checks = 19
+# KERNEL: UVM_INFO /home/build/vlib1/vlib/uvm-1.2/src/base/uvm_report_server.svh(869) @ 595: reporter [UVM/REPORT/SERVER] 
+# KERNEL: --- UVM Report Summary ---
+# KERNEL: 
+# KERNEL: ** Report counts by severity
+# KERNEL: UVM_INFO :   28
+# KERNEL: UVM_WARNING :    0
+# KERNEL: UVM_ERROR :    0
+# KERNEL: UVM_FATAL :    0
+# KERNEL: ** Report counts by id
+# KERNEL: [RNTST]     1
+# KERNEL: [TEST_DONE]     1
+# KERNEL: [UVM/FACTORY/PRINT]     1
+# KERNEL: [UVM/RELNOTES]     1
+# KERNEL: [UVMTOP]     1
+# KERNEL: [ram_env]     2
+# KERNEL: [ram_scb]    20
+# KERNEL: [test_1]     1
+# KERNEL: 
+# RUNTIME: Info: RUNTIME_0068 uvm_root.svh (521): $finish called.
+# KERNEL: Time: 595 ns,  Iteration: 61,  Instance: /ahb_ram_tb,  Process: @INITIAL#43_3@.
+# KERNEL: stopped at time: 595 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+# VSIM: Simulation has finished.
+Done
