@@ -1,3 +1,4 @@
+// this scb uses uvm_analysis_export and uvm_tlm_analysis_fifo
 /*class ram_scb extends uvm_scoreboard;
 
   `uvm_component_utils(ram_scb)
@@ -99,7 +100,7 @@ endclass
 
 */
 
-//you can use uvm_analysis_imp instead of uvm_analysis_export + fifo if you want to directly receive transactions into the scoreboard without using a FIFO.
+///////you can use uvm_analysis_imp instead of uvm_analysis_export + fifo if you want to directly receive transactions into the scoreboard without using a FIFO.
 
 class ram_scb extends uvm_scoreboard;
 
