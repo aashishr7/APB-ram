@@ -1,0 +1,49 @@
+### 📘 **Module Description: `apb_single_port_ram`**
+
+The `apb_single_port_ram` module implements a **simple, synthesizable single-port RAM** with an **APB (Advanced Peripheral Bus)** interface. It supports **read** and **write** operations through standard APB signals, making it suitable for integration in SoC and peripheral subsystems.
+---
+### 🔧 **Key Features:**
+* **Parameterizable Size:**
+
+  * `ADDR_WIDTH`: Determines memory depth (e.g., 8 bits → 256 locations).
+  * `DATA_WIDTH`: Width of each data word (default 32 bits).
+
+* **APB-Compliant Interface:**
+
+  * Uses standard APB signals: `PSEL`, `PENABLE`, `PWRITE`, `PADDR`, `PWDATA`, `PRDATA`, `PREADY`, and `PSLVERR`.
+
+* **Single-Port RAM Array:**
+
+  * Internal memory defined as: `mem[0 : (1<<ADDR_WIDTH)-1]`, supporting synchronous access.
+
+* **Always Ready Response:**
+
+  * `PREADY` is hardwired to `1'b1` (no wait states).
+  * `PSLVERR` is hardwired to `1'b0` (no error signaling).
+
+---
+
+### 🔄 **Operation:**
+
+* **Access Validation:**
+  * An internal signal `access_valid` becomes `1` during valid APB accesses (`PSEL && PENABLE`).
+
+* **Write Operation:**
+  * When `access_valid` is high and `PWRITE = 1`, the `PWDATA` value is written into the memory at address `PADDR`.
+
+* **Read Operation:**
+
+  * When `access_valid` is high and `PWRITE = 0`, the data at address `PADDR` is read from memory into `PRDATA`.
+
+---
+
+### ⏱️ **Clocking & Reset:**
+
+* All logic is synchronous to `PCLK`.
+* An active-low reset `PRESETn` resets the internal `access_valid` flag.
+
+---
+
+### ✅ **Usage:**
+
+This module can be used as a simple memory-mapped peripheral in SoC test environments or APB-compatible subsystems for simulation and prototyping purposes.
